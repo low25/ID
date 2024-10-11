@@ -12,7 +12,7 @@ body, html {
 }
 
 #sum {
-    background-color: #000000;
+    background-color: #000000 !important;
     animation-name: hy;
     animation-duration: 2s;
     animation-fill-mode: forwards;
