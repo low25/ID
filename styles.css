@@ -12,7 +12,7 @@ body, html {
 }
 
 #sum {
-    background: radial-gradient(circle, #2d2d2d 0%, #000000 100%);
+    background-color: #000000;
     animation-name: hy;
     animation-duration: 2s;
     animation-fill-mode: forwards;
@@ -23,6 +23,7 @@ body, html {
         opacity:0%;
     }
     to {
+        background: radial-gradient(circle, #2d2d2d 0%, #000000 100%) !important;
         opacity:100%;
     }
 }
