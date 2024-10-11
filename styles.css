@@ -11,6 +11,10 @@ body, html {
     border-radius: 100%;
 }
 
+.summary{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 #sum {
     background-color: #000000 !important;
     animation-name: hy;
