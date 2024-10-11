@@ -16,21 +16,9 @@ body, html {
 }
 
 #sum {
-    background-color: #000000 !important;
-    animation-name: hy;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+    background-color: #000000 ;
 }
 
-@keyframes hy {
-    from {
-        opacity:0%;
-    }
-    to {
-        background: radial-gradient(circle, #2d2d2d 0%, #000000 100%) !important;
-        opacity:100%;
-    }
-}
 
 .background {
     position: absolute;
