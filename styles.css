@@ -12,7 +12,16 @@ body, html {
 }
 
 #2{
-    background: radial-gradient(#2d2d2d, #000000)
+    animation: hy 1s forwards;
+}
+
+@keyframes hy{
+    0%{
+        background: radial-gradient(#000000, #000000)
+    }
+    100%{
+        background: radial-gradient(#2d2d2d, #000000)
+    }
 }
 
 .background {
