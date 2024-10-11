@@ -8,34 +8,39 @@ body, html {
     justify-content: center;
     align-items: center;
     font-family: 'Helvetica Neue', sans-serif;
+    border-radius: 100%;
 }
 
 .background {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 90%;
-    height: 90%;
-    background: linear-gradient(135deg, #1d2cff 10%, #6f00ff 100%);
+    /* top: 0; */
+    /* left: 0; */
+    width: 1000px;
+    height: 1000px;
+    background: repeating-radial-gradient(#141414, #000000 100px);
     z-index: -1;
     transition: transform 0.2s ease;
+    border-radius: 100%;
 }
 
 .container {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgb(255 255 255 / 8%);
     padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    width: 80%;
+    border-radius: 100%;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
+    width: 500px;
     max-width: 600px;
     animation: fadeIn 2s forwards;
+    color: white;
+    height: 500px;
+    align-content: center;
 }
 
 /* Title and Text */
 h1 {
     font-size: 3rem;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
@@ -50,17 +55,21 @@ p {
     padding: 14px 28px;
     margin-top: 30px;
     font-size: 1.2rem;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #ffffff;
+    color: #000000;
     text-decoration: none;
     border-radius: 50px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.5s ease, background 0.5s ease;
+    /* transition: all 0.5s; */
 }
 
 .button:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    background: black;
+    color: white;
+    /* transition: all 0.5s; */
 }
 
 .slide-in {
