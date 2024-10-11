@@ -11,15 +11,17 @@ body, html {
     border-radius: 100%;
 }
 
-#2{
-    animation: hy 1s forwards;
+#sum{
+    animation-name: hy;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes hy{
-    0%{
+    from{
         background: radial-gradient(#000000, #000000)
     }
-    100%{
+    to{
         background: radial-gradient(#2d2d2d, #000000)
     }
 }
