@@ -11,6 +11,10 @@ body, html {
     border-radius: 100%;
 }
 
+#2{
+    background: radial-gradient(#2d2d2d, #000000)
+}
+
 .background {
     position: absolute;
     /* top: 0; */
