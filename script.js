@@ -33,6 +33,6 @@ const dotContainer = document.getElementById('dot-container');
         }
 
         // Generate 50 dots smoothly
-        createDotsSmoothly(50);
+        createDotsSmoothly(100);
 
 
