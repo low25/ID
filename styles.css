@@ -10,7 +10,6 @@ body, html {
     
 }
 
-
 .summary{
     background-color: rgba(255, 255, 255, 0.09);
     border-radius: 15px;
@@ -35,10 +34,35 @@ body, html {
     /* left: 0; */
     width: 1000px;
     height: 980px;
+    background: repeating-radial-gradient(#1c1c1c, #000000 100px);
+    z-index: -1;
+    transition: transform 0.2s ease;
+    border-radius: 100%;
+}
+
+#background2 {
+    top:0;
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+    width: 1000px;
+    height: 980px;
     background: repeating-radial-gradient(#1c1c1c, #484848 100px);
     z-index: -1;
     transition: transform 0.2s ease;
     border-radius: 100%;
+}
+
+.container {
+    text-align: left;
+    padding: 40px;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
+    
+    position:absolute;
+    animation: fadeIn 2s forwards;
+    color: white;
+    align-content: center;
+    top:33%;
 }
 
 .container {
