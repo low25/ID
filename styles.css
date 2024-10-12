@@ -27,25 +27,26 @@ body, html {
     text-align:center !important;
 }
 
-/* Custom Scrollbar Styling */
+/* Custom Scrollbar Styling with More Visible Edges */
 ::-webkit-scrollbar {
     width: 12px; /* Width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1); /* Transparent white track */
+    background: rgba(255, 255, 255, 0.15); /* Slightly more opaque white track */
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black scrollbar */
+    background: rgba(0, 0, 0, 0.7); /* More visible black scrollbar */
     border-radius: 10px;
-    border: 3px solid rgba(255, 255, 255, 0.1); /* Transparent white border */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* More visible white border */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.8); /* Slightly darker on hover */
+    background: rgba(0, 0, 0, 0.9); /* Darker on hover for clarity */
 }
+
 
 
 .background {
