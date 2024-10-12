@@ -56,7 +56,7 @@ body, html {
         transform: translateY(50px); /* Start slightly below */
     }
     40% {
-        opacity: 1;
+        opacity: 0.8;
     }
     100% {
         opacity: 0;
