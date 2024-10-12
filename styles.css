@@ -18,6 +18,11 @@ body, html {
     padding:25px;
     width:1500px !important;
     height:fit-content;
+    transition: all 0.2s;
+}
+
+.summary:hover{
+    background-color: rgba(255, 255, 255, 0.445);
 }
 
 #sum {
