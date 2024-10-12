@@ -11,6 +11,10 @@ body, html {
     
 }
 
+footer{
+    color: white;
+}
+
 .summary{
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.09);
