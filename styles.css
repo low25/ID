@@ -12,6 +12,8 @@ body, html {
 }
 
 footer{
+    top:5px;
+    position: fixed;
     color: white;
 }
 
