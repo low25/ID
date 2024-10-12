@@ -12,21 +12,27 @@ document.addEventListener("mousemove", (event) => {
     background2.style.transform = `translate(${moveX*1.5}px, ${moveY*1.5}px)`;
 });
 
-// Add random dots to the background
 const dotContainer = document.getElementById('dot-container');
 
-// Function to generate random dots
-function createDots(numDots) {
-    for (let i = 0; i < numDots; i++) {
-        const dot = document.createElement('div');
-        dot.classList.add('dots');
-        dot.style.top = `${Math.random() * 100}%`;
-        dot.style.left = `${Math.random() * 100}%`;
-        dotContainer.appendChild(dot);
-    }
-}
+        // Function to create a single dot at a random position
+        function createDot() {
+            const dot = document.createElement('div');
+            dot.classList.add('dots');
+            dot.style.top = `${Math.random() * 100}%`;
+            dot.style.left = `${Math.random() * 100}%`;
+            dotContainer.appendChild(dot);
+        }
 
-// Generate 50 dots
-createDots(50);
+        // Function to gradually create dots with random delays
+        function createDotsSmoothly(numDots) {
+            for (let i = 0; i < numDots; i++) {
+                setTimeout(() => {
+                    createDot();
+                }, i * Math.random() * 500); // Random delay up to 500ms
+            }
+        }
+
+        // Generate 50 dots smoothly
+        createDotsSmoothly(50);
 
 
