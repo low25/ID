@@ -26,6 +26,55 @@ body, html {
 #centertxt{
     text-align:center !important;
 }
+/* Dots in the Background */
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.dots {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+    animation: blink 2s infinite ease-in-out;
+}
+
+@keyframes blink2 {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+}
+
+.dots:nth-child(odd) {
+    animation: blink2 3s infinite ease-in-out;
+}
+
+/* Generate Random Dots */
+#dot-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Behind all content */
+    pointer-events: none;
+}
+
 
 /* Custom Scrollbar Styling with More Visible Edges */
 ::-webkit-scrollbar {
