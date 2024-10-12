@@ -27,15 +27,17 @@ body, html {
     text-align:center !important;
 }
 /* Dots in the Background */
-@keyframes blink {
+@keyframes blinkAndMoveUp {
     0% {
         opacity: 0;
+        transform: translateY(50px); /* Start slightly below */
     }
     50% {
         opacity: 1;
     }
     100% {
         opacity: 0;
+        transform: translateY(-50px); /* Move upwards */
     }
 }
 
@@ -45,26 +47,28 @@ body, html {
     height: 5px;
     background-color: white;
     border-radius: 50%;
-    animation: blink 2s infinite ease-in-out;
+    animation: blinkAndMoveUp 6s infinite ease-in-out; /* Smooth blinking and movement */
 }
 
-@keyframes blink2 {
+@keyframes blinkAndMoveUp2 {
     0% {
         opacity: 0;
+        transform: translateY(50px); /* Start slightly below */
     }
     40% {
         opacity: 1;
     }
-    80% {
+    100% {
         opacity: 0;
+        transform: translateY(-50px); /* Move upwards */
     }
 }
 
 .dots:nth-child(odd) {
-    animation: blink2 3s infinite ease-in-out;
+    animation: blinkAndMoveUp2 7s infinite ease-in-out; /* Slightly longer for variety */
 }
 
-/* Generate Random Dots */
+/* Dot container */
 #dot-container {
     position: absolute;
     width: 100%;
