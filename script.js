@@ -28,7 +28,7 @@ const dotContainer = document.getElementById('dot-container');
             for (let i = 0; i < numDots; i++) {
                 setTimeout(() => {
                     createDot();
-                }, i * Math.random() * 500); // Random delay up to 500ms
+                }, i * Math.random() * 1000); // Random delay up to 500ms
             }
         }
 
