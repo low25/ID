@@ -71,7 +71,7 @@ footer{
 @keyframes blinkAndMoveUp2 {
     0% {
         opacity: 0;
-        transform: translateY(150px); /* Start slightly below */
+        transform: translateY(550px); /* Start slightly below */
     }
     40% {
         opacity: 0.8;
