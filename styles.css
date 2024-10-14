@@ -162,7 +162,7 @@ footer{
     text-align: left;
     padding: 40px;
     /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
-    
+    transform: scale(0.7,0.7);
     position:absolute;
     animation: fadeIn 2s forwards;
     color: white;
