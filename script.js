@@ -1,15 +1,35 @@
 document.addEventListener("mousemove", (event) => {
     const background = document.querySelector(".background");
-    const moveX = (event.clientX / window.innerWidth - 0.5) * 20;
-    const moveY = (event.clientY / window.innerHeight - 0.5) * 20;
-    background.style.transform = `translate(${moveX*2}px, ${moveY*2}px)`;
+    if(background != null){
+        const moveX = (event.clientX / window.innerWidth - 0.5) * 20;
+        const moveY = (event.clientY / window.innerHeight - 0.5) * 20;
+        background.style.transform = `translate(${moveX*2}px, ${moveY*2}px)`;
+    }
 });
+
+document.addEventListener("click",(event) =>{
+    
+    if ( event.target.getAttribute("class") == "summary"){
+        document.getElementsByClassName("analise_holder")[0].className = "analise_holder_open";
+    }
+    
+})
+
+document.addEventListener("keydown",(event) =>{
+    event.preventDefault();
+   if (event.key == "Escape"){
+        console.log("hi")
+        document.getElementsByClassName("analise_holder_open")[0].className = "analise_holder";
+    }
+})
 
 document.addEventListener("mousemove", (event) => {
     const background2 = document.getElementById("background2");
-    const moveX = (event.clientX / window.innerWidth - 0.5) * 20;
-    const moveY = (event.clientY / window.innerHeight - 0.5) * 20;
-    background2.style.transform = `translate(${moveX*2}px, ${moveY*2}px)`;
+    if(background2 != null){
+        const moveX = (event.clientX / window.innerWidth - 0.5) * 20;
+        const moveY = (event.clientY / window.innerHeight - 0.5) * 20;
+        background2.style.transform = `translate(${moveX*2}px, ${moveY*2}px)`;
+    }
 });
 
 const dotContainer = document.getElementById('dot-container');

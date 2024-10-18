@@ -31,6 +31,9 @@ footer{
     transform: scale(1,1);
     transition: all 0.5s;
 }
+.summary *{
+    pointer-events: none;
+}
 
 .summary:hover{
     background-color: rgba(255, 255, 255, 0.233);
@@ -132,6 +135,32 @@ footer{
     transition: transform 0.2s ease;
     border-radius: 100%;
 }
+
+.analise_holder {
+    width: 0px;
+    height: 0px;
+    position: fixed;
+    z-index: 10 !important;
+    top: 0;
+    align-content: center;
+    text-align: center;
+    font-size: 0pt;
+    transition: all 0.5s;
+}
+
+.analise_holder_open{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 10 !important;
+    align-content: center;
+    text-align: center;
+    transition: all 0.5s;
+}
+
 
 #background2 {
     top:0;
