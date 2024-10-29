@@ -11,7 +11,6 @@ document.addEventListener("click",(event) =>{
     
     if ( event.target.getAttribute("class") == "summary"){
         document.getElementsByTagName("body")[0].classList.add("hide_scroll");
-        console.log(event.target.querySelector(".desc").innerHTML)
         document.getElementsByClassName("analise_holder")[0].innerHTML = event.target.querySelector(".desc").innerHTML;
         document.getElementsByClassName("analise_holder")[0].className = "analise_holder_open";
     }
