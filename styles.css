@@ -135,10 +135,7 @@ footer{
     transition: transform 0.2s ease;
     border-radius: 100%;
 }
-.desc{
-    display: none;
 
-}
 
 .analise_holder {
     width: 100%;
@@ -334,4 +331,8 @@ p {
         font-size: 1.1rem;
         padding: 12px 24px;
     }
+}
+
+.desc{
+    display: none !important;
 }
