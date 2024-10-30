@@ -11,8 +11,8 @@ document.addEventListener("click",(event) =>{
     
     if ( event.target.getAttribute("class") == "summary"){
         document.getElementsByTagName("body")[0].classList.add("hide_scroll");
-        document.getElementsByClassName("analise_holder")[0].innerHTML = event.target.querySelector(".desc").innerHTML;
         document.getElementsByClassName("analise_holder")[0].className = "analise_holder_open";
+        document.getElementsByClassName("analise_holder_open")[0].innerHTML = event.target.querySelector(".desc").innerHTML;
     }
     
 })
@@ -26,8 +26,8 @@ document.addEventListener("click", (event)=>{
 })
 
 document.addEventListener("keydown",(event) =>{
-    event.preventDefault();
    if (event.key == "Escape"){
+        event.preventDefault();
         document.getElementsByClassName("analise_holder_open")[0].className = "analise_holder";
         document.getElementsByTagName("body")[0].classList.remove("hide_scroll");
         document.getElementsByClassName("analise_holder")[0].innerHTML = "";
@@ -42,6 +42,8 @@ document.addEventListener("mousemove", (event) => {
         background2.style.transform = `translate(${moveX*2}px, ${moveY*2}px)`;
     }
 });
+
+
 
 const dotContainer = document.getElementById('dot-container');
 
@@ -62,8 +64,6 @@ const dotContainer = document.getElementById('dot-container');
                 }, i * Math.random() * 1000); // Random delay up to 500ms
             }
         }
-
-        // Generate 50 dots smoothly
-        createDotsSmoothly(150);
-
+        
+window.onload = createDotsSmoothly(100);
 

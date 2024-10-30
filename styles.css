@@ -74,14 +74,14 @@ footer{
 @keyframes blinkAndMoveUp2 {
     0% {
         opacity: 0;
-        transform: translateY(550px); /* Start slightly below */
+        transform: translateY(250px); /* Start slightly below */
     }
     40% {
         opacity: 0.8;
     }
     100% {
         opacity: 0;
-        transform: translateY(-50px); /* Move upwards */
+        transform: translateY(50px); /* Move upwards */
     }
 }
 
@@ -101,7 +101,7 @@ footer{
 }
 
 
-/* Custom Scrollbar Styling with More Visible Edges */
+
 ::-webkit-scrollbar {
     width: 12px; /* Width of the scrollbar */
 }
@@ -138,6 +138,7 @@ footer{
 
 
 .analise_holder {
+    pointer-events: none;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -145,7 +146,6 @@ footer{
     top: 0;
     align-content: center;
     text-align: center;
-    transform: scale(0);
     transition: all .8s;
 }
 
@@ -159,7 +159,6 @@ footer{
     color: white;
     width: 100%;
     height: 100%;
-    transform: scale(1);
     top: 0;
     position: fixed;
     z-index: 10 !important;
@@ -179,21 +178,34 @@ footer{
     padding: 10px;
     background-color: black;
     line-height: 2;
+    animation: fade-in-p 1s forwards;
+}
+@keyframes fade-in-p {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
 }
 
 
 .analise_holder_open h1{
+    animation: fade-in-p 1s forwards;
     font-size: 20pt !important;
     text-align: left !important;
     margin: 50px 30px 50px 30px;
     text-decoration: underline;
 }
 hr{
+    animation: fade-in-p 1s forwards;
     border: none;
     border-top: 5px dashed white;
 }
 
 .analise_holder_open h1.esc{
+    animation: fade-in-p 1s forwards;
     position: absolute;
     right: 0;
     top: 5px;
