@@ -15,9 +15,9 @@ body, html {
 
 footer{
     top:5px;
-    position: fixed;
+    position: relative;
     color: white;
-    z-index: 1000;
+    z-index: 1;
 }
 
 .summary{
