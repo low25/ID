@@ -47,18 +47,18 @@ footer{
 #centertxt{
     text-align:center !important;
 }
-/* Dots in the Background */
+
 @keyframes blinkAndMoveUp {
     0% {
         opacity: 0;
-        transform: translateY(150px); /* Start slightly below */
+        transform: translateY(150px);
     }
     50% {
         opacity: 1;
     }
     100% {
         opacity: 0;
-        transform: translateY(-50px); /* Move upwards */
+        transform: translateY(-50px); 
     }
 }
 
@@ -68,57 +68,57 @@ footer{
     height: 5px;
     background-color: white;
     border-radius: 50%;
-    animation: blinkAndMoveUp 6s infinite ease-in-out; /* Smooth blinking and movement */
+    animation: blinkAndMoveUp 6s infinite ease-in-out; 
 }
 
 @keyframes blinkAndMoveUp2 {
     0% {
         opacity: 0;
-        transform: translateY(250px); /* Start slightly below */
+        transform: translateY(250px);
     }
     40% {
         opacity: 0.8;
     }
     100% {
         opacity: 0;
-        transform: translateY(50px); /* Move upwards */
+        transform: translateY(50px);
     }
 }
 
 .dots:nth-child(odd) {
-    animation: blinkAndMoveUp2 7s infinite ease-in-out; /* Slightly longer for variety */
+    animation: blinkAndMoveUp2 7s infinite ease-in-out; 
 }
 
-/* Dot container */
+
 #dot-container {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -1; /* Behind all content */
+    z-index: -1; 
     pointer-events: none;
 }
 
 
 
 ::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
+    width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.15); /* Slightly more opaque white track */
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.7); /* More visible black scrollbar */
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.3); /* More visible white border */
+    border: 2px solid rgba(255, 255, 255, 0.3); 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.9); /* Darker on hover for clarity */
+    background: rgba(0, 0, 0, 0.9);
 }
 
 
@@ -126,8 +126,6 @@ footer{
 .background {
     top:-150px;
     position: absolute;
-    /* top: 0; */
-    /* left: 0; */
     width: 1000px;
     height: 980px;
     background: repeating-radial-gradient(#1c1c1c, #000000 100px);
