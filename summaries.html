@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="sum" lang="en" style="overflow-y: scroll;" >
+<html id="sum" lang="pt" style="overflow-y: scroll;" >
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
@@ -14,107 +14,87 @@
     <div class="container2 fade-in">
         <h1 style="position: fixed !important;top:-100px"><b>Análises Das Sessões</b></h1>
         
-        <div class="summary">
-            <h2><b>Análise 1</b></h2>
-            <p> A matéria abordada está relacionada com os conceitos fundamentais de sistemas digitais, circuitos, numeração binária e conversões entre sistemas numéricos.🖱️<-</p>
-            <div class="desc"><h1>Análise</h1><h1 class="esc">Sair (Esc)</h1>
-                <p>
-                  A aula abordou os conceitos básicos de <strong>sistemas digitais</strong>, como <strong>numeração binária e conversão entre sistemas numéricos</strong>, também como a diferença entre <strong>sinais analógicos e digitais</strong>.
-                  <br>Esses fundamentos são essenciais para entender como computadores processam dados, e o conteúdo teórico foi reforçado com exercícios práticos de conversão entre várias bases numéricas, o que ajuda bastante na fixação do conteúdo.
-                </p>
-                <hr width="90%">
-                
-                <h1>Crítica</h1>
-                <p>
-                    Gostei da abordagem da aula, porém houve momentos em que a quantidade de informação complexa foi apresentada de uma só vez, o que pode ter gerado alguma confusão.
-                    <br>A densidade de conceitos, especialmente em temas como sistemas de numeração e circuitos, poderia ser abordada de forma mais gradual, permitindo uma assimilação mais eficaz e evitando sobrecarga de informação,o que poderá ter ocorrido devido à necessidade de lecionar rapidamente a matéria da aula anterior.
-                </p>
-                <hr width="90%">
-                
-                <h1>Comentário</h1>
-                <p>
-                  No geral, a aula foi muito boa e necessária para quem está a começar na área de sistemas digitais. Os exercícios de conversão ajudaram a fixar o conteúdo e a treinar para a lógica das conversões. Faço referência, outra vez, ao facto de ter sido muita informação o que pode ter causado confusão para quem está a iniciar a matéria.
-                </p></div>
+        <div class="custom-select">
+            <div class="selected-option" onclick="toggleDropdown()">SO</div>
+            <ul id="options-list">
+                <li onclick="selectOption('SO')">SO</li>
+                <li onclick="selectOption('IPM')">IPM</li>
+            </ul>
         </div>
         
-        <div class="summary">
-          <h2><b>Análise 2</b></h2>
-          <p> A análise está focada nos exercícios realizados em aula, abrangendo problemas de conversão numérica, lógica digital e compreensão de conceitos teóricos.🖱️<-</p>
-          <div class="desc">
-            <h1>Análise</h1>
-            <h1 class="esc">Sair (Esc)</h1>
-            <p>
-              Os exercícios propostos abordaram de forma prática os <strong>conceitos de sistemas digitais</strong>, especialmente a <strong>conversão entre sistemas numéricos</strong> e a aplicação de <strong>lógica digital</strong>.
-              <br>As atividades foram projetadas para consolidar o conhecimento teórico, desafiando os alunos a aplicar as bases numéricas em situações concretas e a resolver problemas relacionados a circuitos digitais. O nível de dificuldade foi progressivo, permitindo um melhor entendimento das etapas envolvidas.
-            </p>
-            <hr width="90%">
-            
-            <h1>Crítica</h1>
-            <p>
-              Embora os exercícios tenham sido úteis, alguns problemas apresentaram um grau de dificuldade elevado para quem está a iniciar o tema. A transição entre os níveis mais básicos e avançados poderia ter sido mais gradual.
-            </p>
-            <hr width="90%">
-            
-            <h1>Comentário</h1>
-            <p>
-              Os exercícios foram essenciais para a consolidação do conteúdo, oferecendo uma visão prática que complementa a teoria. Porém, uma abordagem mais equilibrada entre dificuldade e suporte poderia melhorar o aproveitamento geral.
-            </p>
-          </div>
-        </div>
-
-        <div class="summary">
-            
-          <h2><b>Análise 3</b></h2>
-          <p> A matéria abordada está relacionada com os conceitos de Álgebra de Boole, propriedades e simplificações de expressões lógicas.🖱️<-</p>
-          <div class="desc">
-            <h1>Análise</h1>
-            <h1 class="esc">Sair (Esc)</h1>
-            <p>
-              A aula abordou os fundamentos da <strong>Álgebra de Boole</strong>, incluindo variáveis lógicas, funções, operações básicas (AND, OR, NOT), e o uso de tabelas de verdade para representar funções lógicas.
-              <br>Também foram exploradas, propriedades e teoremas, como as <strong>leis de De Morgan</strong>, e demonstrada a sua aplicação na simplificação de expressões algébricas, essenciais para o entendimento de sistemas digitais.
-            </p>
-            <hr width="90%">
-            
-            <h1>Crítica</h1>
-            <p>
-              Gostei da abordagem teórica da aula, mas a quantidade de novos conceitos foi densa e exigiu bastante atenção dos alunos. A explicação de alguns teoremas poderia ser acompanhada por exemplos mais detalhados, facilitando a aplicação prática.
-            </p>
-            <hr width="90%">
-            
-            <h1>Comentário</h1>
-            <p>
-              No geral, a aula foi rica em informações e essencial para consolidar a base teórica da lógica digital. A exploração detalhada das simplificações algébricas foi valiosa, mas sugiro a inclusão de mais exercícios práticos e para facilitar a aprendizagem.
-            </p>
-          </div>
-        </div>
-
-        <div class="summary">
-            <h2><b>Análise 4</b></h2>
-            <p>...🖱️<-</p>
-            <div class="desc"><h1>Análise</h1><h1 class="esc">Sair (Esc)</h1>
+        <div class="summary so">
+            <h2><b>Análise 1 - 21/02/2025</b></h2>
+            <p>Na primeira aula de Sistemas Operativos, foi explicado o plano do semestre e a avaliação contínua. Começámos logo um trabalho em grupo sobre sistemas operativos, que ajudou a entender melhor os conceitos base.🖱️<-</p>
+            <div class="desc">
+                <h1>Análise</h1>
+                <h1 class="esc">Sair (Esc)</h1>
                 <p>
-                  A aula abordou os conceitos básicos de <strong>sistemas digitais</strong>, como <strong>numeração binária e conversão entre sistemas numéricos</strong>, também como a diferença entre <strong>sinais analógicos e digitais</strong>.
-                  <br>Esses fundamentos são essenciais para entender como computadores processam dados, e o conteúdo teórico foi reforçado com exercícios práticos de conversão entre várias bases numéricas, o que ajuda bastante na fixação do conteúdo.
+                    Na primeira aula de Sistemas Operativos (SO), o professor apresentou os temas principais que vão ser trabalhados durante o semestre. Também explicou como vai funcionar a avaliação, que será contínua: 20% com trabalhos feitos na aula, 40% com um portfólio digital e 40% com um projeto final individual. Esta forma de avaliação ajuda os alunos a participarem mais e a aplicarem o que aprendem.
+
+Depois da explicação inicial, começámos o Trabalho Prático 1, feito em grupo. O objetivo era pesquisar sobre sistemas operativos: o que são, para que servem, as suas funções, gestão de memória e recursos, multitarefa e comparar os sistemas Windows, Linux e MacOS.
                 </p>
+                
                 <hr width="90%">
                 
                 <h1>Crítica</h1>
                 <p>
-                    Gostei da abordagem da aula, porém houve momentos em que a quantidade de informação complexa foi apresentada de uma só vez, o que pode ter gerado alguma confusão.
-                    <br>A densidade de conceitos, especialmente em temas como sistemas de numeração e circuitos, poderia ser abordada de forma mais gradual, permitindo uma assimilação mais eficaz e evitando sobrecarga de informação,o que poderá ter ocorrido devido à necessidade de lecionar rapidamente a matéria da aula anterior.
+                    A aula foi bem organizada e equilibrada entre teoria e prática. A explicação sobre a avaliação foi clara e ajudou a perceber melhor o que se espera de nós. O método usado motiva-nos a participar mais nas aulas e a trabalhar de forma mais autónoma.
+O trabalho em grupo foi uma boa forma de começar, pois ajudou a trocar ideias, pesquisar em conjunto e entender melhor os primeiros conceitos sobre sistemas operativos. Os temas escolhidos foram acessíveis e importantes para a base da disciplina.
                 </p>
                 <hr width="90%">
                 
                 <h1>Comentário</h1>
                 <p>
-                  No geral, a aula foi muito boa e necessária para quem está a começar na área de sistemas digitais. Os exercícios de conversão ajudaram a fixar o conteúdo e a treinar para a lógica das conversões. Faço referência, outra vez, ao facto de ter sido muita informação o que pode ter causado confusão para quem está a iniciar a matéria.
-                </p></div>
+                    Esta aula inicial foi bem organizada, combinando uma introdução teórica com um trabalho prático que ajudou a consolidar os conceitos básicos sobre sistemas operativos. A divisão em grupos incentivou a pesquisa e a troca de ideias, preparando os alunos para futuras apresentações do trabalho.
+                </p>
+                
+            </div>
         </div>
+        
+        <div hidden="true" class="summary ipm">
+          <h2><b>Análise 2</b></h2>
+          <p> A análise está focada nos exercícios realizados em aula, abrangendo problemas de conversão numérica, lógica digital e compreensão de conceitos teóricos.📱<-</p>
+          <div class="desc">
+              <h1>Análise</h1>
+              <h1 class="esc">Sair (Esc)</h1>
+              <p>
+                Os exercícios propostos abordaram de forma prática os <strong>conceitos de sistemas digitais</strong>, especialmente a <strong>conversão entre sistemas numéricos</strong> e a aplicação de <strong>lógica digital</strong>.
+                <br>As atividades foram projetadas para consolidar o conhecimento teórico, desafiando os alunos a aplicar as bases numéricas em situações concretas e a resolver problemas relacionados a circuitos digitais. O nível de dificuldade foi progressivo, permitindo um melhor entendimento das etapas envolvidas.
+              </p>
+              <hr width="90%">
+              
+              <h1>Crítica</h1>
+              <p>
+                Embora os exercícios tenham sido úteis, alguns problemas apresentaram um grau de dificuldade elevado para quem está a iniciar o tema. A transição entre os níveis mais básicos e avançados poderia ter sido mais gradual.
+              </p>
+              <hr width="90%">
+              
+              <h1>Comentário</h1>
+              <p>
+                Os exercícios foram essenciais para a consolidação do conteúdo, oferecendo uma visão prática que complementa a teoria. Porém, uma abordagem mais equilibrada entre dificuldade e suporte poderia melhorar o aproveitamento geral.
+              </p>
+              <p class="date-placeholder" style="font-size: smaller; text-align: right;">Data: 12/05/2025</p>
+          </div>
+        </div>
+
+
 
     </div>
     <div class="analise_holder"></div>
     
     <script src="script.js"></script>
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById('options-list');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function selectOption(value) {
+            document.querySelector('.selected-option').textContent = value;
+            toggleDropdown();
+            handleSelectChange(value); // Call your existing function with the selected value
+        }
+    </script>
 </body>
-<footer>Criado por Carlos Silva 2024.</footer>
+<footer>Criado por Carlos Silva 2025.</footer>
 </html>

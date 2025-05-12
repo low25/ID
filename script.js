@@ -8,8 +8,8 @@ document.addEventListener("mousemove", (event) => {
 });
 
 document.addEventListener("click",(event) =>{
-    
-    if ( event.target.getAttribute("class") == "summary"){
+    if ( event.target.classList.contains("summary")){
+        console.log("test")
         document.getElementsByTagName("body")[0].classList.add("hide_scroll");
         document.getElementsByClassName("analise_holder")[0].className = "analise_holder_open";
         document.getElementsByClassName("analise_holder_open")[0].innerHTML = event.target.querySelector(".desc").innerHTML;
@@ -42,6 +42,22 @@ document.addEventListener("mousemove", (event) => {
         background2.style.transform = `translate(${moveX*2}px, ${moveY*2}px)`;
     }
 });
+
+function handleSelectChange(value) {
+    const so = document.querySelectorAll(".so");
+    const ipm = document.querySelectorAll(".ipm");
+
+    // Update the title without appending multiple times
+    if (value === "SO") {
+        document.title = "Análises - SO";
+        so.forEach(el => el.style.display = "block");
+        ipm.forEach(el => el.style.display = "none");
+    } else {
+        document.title = "Análises - IPM";
+        so.forEach(el => el.style.display = "none");
+        ipm.forEach(el => el.style.display = "block");
+    }
+}
 
 
 

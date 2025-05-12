@@ -1,4 +1,3 @@
-
 *{
     user-select: none;
     font-family: "Fira Code", "Consolas", "Courier New", "Lucida Console", monospace !important;
@@ -13,12 +12,7 @@ body, html {
     font-size: 1.1rem;
 }
 
-footer{
-    top:5px;
-    position: relative;
-    color: white;
-    z-index: 1;
-}
+
 
 .summary{
     cursor: pointer;
@@ -124,7 +118,7 @@ footer{
 
 
 .background {
-    top:-150px;
+    top: -150px;
     position: absolute;
     width: 1000px;
     height: 980px;
@@ -134,6 +128,14 @@ footer{
     border-radius: 100%;
 }
 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
 
 .analise_holder {
     pointer-events: none;
@@ -274,7 +276,6 @@ p {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.5s ease, background 0.5s ease;
     transform: scale(0.8) !important;
-    /* transition: all 0.5s; */
 }
 
 .button:hover {
@@ -282,16 +283,8 @@ p {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
     background: black;
     color: white;
-    /* transition: all 0.5s; */
 }
 
-.slide-in {
-    animation: slideIn 1.5s ease-out;
-}
-
-.slide-in-back {
-    animation: slideInBack 1.5s ease-out;
-}
 
 /* Animation Styles */
 .fade-in {
@@ -345,4 +338,72 @@ p {
 
 .desc{
     display: none !important;
+}
+
+/* Custom Select Styles */
+.custom-select {
+    border-radius: 15px;
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+}
+
+.selected-option {
+    border: 2px solid #ffffff;
+    background-color: #1c1c1c;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.selected-option:hover {
+    border: 2px solid #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    background: black;
+}
+
+#options-list {
+    border: 2px solid #ffffff;
+    display: none;
+    position: absolute;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-top: 5px;
+    width: 100%;
+    z-index: 100;
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+#options-list li {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    transition: background 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+#options-list li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #c062ff;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #25252549;
+    color: white;
+    padding: 10px 0;
+    z-index: 100;
 }
