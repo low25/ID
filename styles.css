@@ -1,27 +1,178 @@
-
 body {
-	font-family: Arial, sans-serif;
-	margin: 20px;
-	background-color: #f4f4f4;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 20px;
+    background: linear-gradient(135deg, #232526 0%, #1a1a2e 100%);
+    color: #e0e0e0;
+	overflow-x: hidden;
+    transition: background 0.8s;
+    animation: bodyFadeIn 1.2s;
+}
+@keyframes bodyFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.header-bar {
+    width: 100%;
+    background: linear-gradient(90deg, #232526 60%, #7e57c2 100%);
+    color: #fff;
+    padding: 18px 0 12px 0;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    box-shadow: 0 2px 24px #7e57c2, 0 2px 16px rgba(67,206,162,0.12);
+    border-radius: 0 0 18px 18px;
+    margin-bottom: 32px;
+    animation: floatHeader 1.2s;
+    text-shadow: 0 0 8px #7e57c2, 0 0 2px #43cea2;
+}
+@keyframes floatHeader {
+    from { opacity: 0; transform: translateY(-40px);}
+    to { opacity: 1; transform: translateY(0);}
 }
 .lesson {
-	background: #fff;
-	border: 1px solid #ddd;
-	padding: 15px;
-	margin-bottom: 20px;
-	border-radius: 5px;
+    background: linear-gradient(120deg, #232526 80%, #1a1a2e 100%);
+    border: 2.5px solid;
+    border-image: linear-gradient(90deg, #43cea2 0%, #7e57c2 100%) 1;
+    padding: 22px;
+    margin-bottom: 28px;
+    border-radius: 16px;
+    box-shadow: 0 6px 32px #232526, 0 0 16px #43cea233;
+    transition: box-shadow 0.4s, transform 0.3s;
+    animation: fadeInUp 0.7s;
+    position: relative;
+    overflow: hidden;
+}
+.lesson:hover {
+    box-shadow: 0 12px 48px #7e57c2, 0 0 24px #43cea299;
+    transform: translateY(-6px) scale(1.03);
+    transition: box-shadow 0.4s, transform 0.3s;
 }
 .lesson h2 {
-	margin-top: 0;
+    margin-top: 0;
+    color: #43cea2;
+    letter-spacing: 1px;
+    font-size: 1.7em;
+    transition: color 0.3s, text-shadow 0.3s;
+    text-shadow: 0 0 12px #43cea2, 0 2px 8px #7e57c2;
+    animation: titlePop 0.8s;
+}
+@keyframes titlePop {
+    from { opacity: 0; transform: scale(0.9);}
+    to { opacity: 1; transform: scale(1);}
 }
 .lesson .date {
-	color: #888;
-	font-size: 0.9em;
+    color: #b39ddb;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 4px #7e57c2;
 }
 .lesson .topic {
-	font-weight: bold;
-	margin-top: 10px;
+    font-weight: bold;
+    margin-top: 12px;
+    color: #ff9800;
+    font-size: 1.1em;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 6px #ff980088;
 }
-.lesson .notes, .lesson .summary, .lesson .analysis, .lesson .opinion {
-	margin-top: 10px;
+.lesson .summary, .lesson .analysis, .lesson .opinion {
+	padding: 10px;
+    margin-top: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px #2196f355;
+    animation: fadeIn 0.8s;
+    background: #232526cc;
+    color: #e0e0e0;
+}
+@keyframes fadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+
+.lesson .summary {
+    border-left: 5px solid #FF9800;
+}
+.lesson .analysis {
+    border-left: 5px solid #9C27B0;
+}
+.lesson .opinion {
+    border-left: 5px solid #4CAF50;
+}
+.lesson .tags {
+    margin-top: 12px;
+}
+.lesson .tags span {
+    background: linear-gradient(90deg, #7e57c2 60%, #43cea2 100%);
+    border-radius: 16px;
+    padding: 5px 14px;
+    margin-right: 7px;
+    font-size: 0.95em;
+    color: #fff;
+    font-weight: 500;
+    box-shadow: 0 1px 8px #43cea255;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    text-shadow: 0 0 6px #43cea2;
+}
+.lesson .tags span:hover {
+    background: linear-gradient(90deg, #43cea2 60%, #7e57c2 100%);
+    cursor: pointer;
+    transform: scale(1.12);
+    box-shadow: 0 2px 16px #7e57c299;
+}
+a {
+    color: #7e57c2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s, text-shadow 0.3s;
+    text-shadow: 0 0 6px #7e57c288;
+}
+a:hover {
+    text-decoration: underline;
+    color: #43cea2;
+    text-shadow: 0 0 12px #43cea2;
+}
+button {
+    background: linear-gradient(90deg, #43cea2 60%, #2196F3 100%);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    box-shadow: 0 2px 12px #2196f355;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    text-shadow: 0 0 6px #2196F3;
+}
+button:hover {
+    background: linear-gradient(90deg, #2196F3 60%, #43cea2 100%);
+    transform: scale(1.08);
+    box-shadow: 0 4px 24px #43cea299;
+}
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+    border: 1.5px solid #7e57c2;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    background: #232526cc;
+    color: #e0e0e0;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 1px 8px #43cea233;
+}
+input:focus, textarea:focus {
+    border-color: #43cea2;
+    outline: none;
+    box-shadow: 0 2px 16px #43cea299;
+}
+@media (max-width: 600px) {
+    body {
+        margin: 8px;
+    }
+    .lesson {
+        padding: 8px;
+    }
 }
