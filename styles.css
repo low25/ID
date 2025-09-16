@@ -1,0 +1,27 @@
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 20px;
+	background-color: #f4f4f4;
+}
+.lesson {
+	background: #fff;
+	border: 1px solid #ddd;
+	padding: 15px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+.lesson h2 {
+	margin-top: 0;
+}
+.lesson .date {
+	color: #888;
+	font-size: 0.9em;
+}
+.lesson .topic {
+	font-weight: bold;
+	margin-top: 10px;
+}
+.lesson .notes, .lesson .summary, .lesson .analysis, .lesson .opinion {
+	margin-top: 10px;
+}
